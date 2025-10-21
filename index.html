@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INES Skills Badge Marketplace - Internships, Gigs & Freelance</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="image.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="image.png" alt="INES Logo" class="nav-logo">
+                <span class="nav-title">Career Hub</span>
+            </a>
+            
+            <div class="nav-search">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Search opportunities, skills, mentors..." class="search-input">
+                    <div class="search-suggestions" id="searchSuggestions"></div>
+                </div>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="opportunities.html" class="nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Opportunities</span>
+                </a>
+                <a href="network.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Network</span>
+                </a>
+                <a href="skills.html" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Skills</span>
+                </a>
+                
+                <div class="nav-actions">
+                    <button class="btn btn-outline" id="signInBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </button>
+                    <button class="btn btn-primary" id="signUpBtn">
+                        <i class="fas fa-user-plus"></i>
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="heroParticles"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Your Skills Badges Are Your 
+                    <span class="text-gradient">Career Currency</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Breaking the youth unemployment cycle through verified skills badges and live matching to internships, gigs, and freelance projects. From student to employed professional - powered by your proven capabilities.
+                </p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large" id="buildProfileBtn">
+                        <i class="fas fa-award"></i>
+                        Earn Skills Badges
+                    </button>
+                    <button class="btn btn-secondary btn-large" id="exploreOpportunitiesBtn">
+                        <i class="fas fa-briefcase"></i>
+                        Find Gigs & Projects
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="1250">0</div>
+                    <div class="stat-label">Badge Holders</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="450">0</div>
+                    <div class="stat-label">Active Gigs & Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="87">0</div>
+                    <div class="stat-label">Match Success %</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section class="departments">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills Badges Unlock Opportunities</h2>
+                <p class="section-subtitle">Earn verified badges in your field and get matched to internships, gigs, and freelance projects instantly</p>
+            </div>
+            
+            <div class="departments-grid">
+                <div class="department-card" data-category="engineering">
+                    <div class="department-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Engineering</h3>
+                    <div class="department-list">
+                        <span>Water Engineering (WEN)</span>
+                        <span>Civil Engineering (CE)</span>
+                        <span>Computer Science</span>
+                        <span>Architecture</span>
+                    </div>
+                    <div class="department-stats">
+                        <span class="stat">🏅 450+ Badge Holders</span>
+                        <span class="stat">💼 120+ Active Gigs</span>
+                    </div>
+                </div>
+                
+                <div class="department-card" data-category="health">
+                    <div class="department-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health Sciences</h3>
+                    <div class="department-list">
+                        <span>Biomedical Laboratory Sciences (BLS)</span>
+                        <span>General Nursing</span>
+                        <span>Midwifery</span>
+                        <span>Pharmacy</span>
+                        <span>Anesthesia</span>
+                    </div>
+                    <div class="department-stats">
+                        <span class="stat">🏅 320+ Badge Holders</span>
+                        <span class="stat">💼 85+ Internships</span>
+                    </div>
+                </div>
+                
+                <div class="department-card" data-category="business">
+                    <div class="department-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Business & Economics</h3>
+                    <div class="department-list">
+                        <span>Applied Economics (AE)</span>
+                        <span>Enterprise Management</span>
+                        <span>Statistics Applied to Economy (SAE)</span>
+                        <span>Land Management & Valuation</span>
+                    </div>
+                    <div class="department-stats">
+                        <span class="stat">🏅 280+ Badge Holders</span>
+                        <span class="stat">💼 95+ Projects</span>
+                    </div>
+                </div>
+                
+                <div class="department-card" data-category="sciences">
+                    <div class="department-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Applied Sciences</h3>
+                    <div class="department-list">
+                        <span>Biotechnology (Biotech)</span>
+                        <span>Land Survey</span>
+                        <span>Library & Information Sciences</span>
+                    </div>
+                    <div class="department-stats">
+                        <span class="stat">🏅 180+ Badge Holders</span>
+                        <span class="stat">💼 60+ Research Gigs</span>
+                    </div>
+                </div>
+                
+                <div class="department-card" data-category="languages">
+                    <div class="department-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Languages & Communication</h3>
+                    <div class="department-list">
+                        <span>French and English</span>
+                        <span>Communication Studies</span>
+                    </div>
+                    <div class="department-stats">
+                        <span class="stat">🏅 120+ Badge Holders</span>
+                        <span class="stat">💼 45+ Freelance Jobs</span>
+                    </div>
+                </div>
+                
+                <div class="department-card" data-category="administration">
+                    <div class="department-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Administration</h3>
+                    <div class="department-list">
+                        <span>Directorate of Cabinet</span>
+                        <span>Vice-Chancellor Office</span>
+                    </div>
+                    <div class="department-stats">
+                        <span class="stat">🏅 50+ Professionals</span>
+                        <span class="stat">💼 25+ Admin Roles</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How Our Badge Marketplace Works</h2>
+                <p class="section-subtitle">From skills verification to opportunity matching - your complete career solution</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="feature-title">Earn Skills Badges</h3>
+                    <p class="feature-description">Complete assessments and projects to earn verified badges that prove your capabilities to employers.</p>
+                    <a href="skills.html" class="feature-link">
+                        Start Earning <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Live Matching System</h3>
+                    <p class="feature-description">AI-powered matching instantly connects your badges to relevant internships, gigs, and freelance projects.</p>
+                    <a href="opportunities.html" class="feature-link">
+                        Get Matched <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="feature-title">Access Opportunities</h3>
+                    <p class="feature-description">Browse and apply to hundreds of internships, gigs, and projects matched to your badge profile.</p>
+                    <a href="opportunities.html" class="feature-link">
+                        Browse Marketplace <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="image.png" alt="INES Logo" class="footer-logo">
+                    <p class="footer-motto">Scientia et Lux</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Platform</h4>
+                        <a href="opportunities.html">Opportunities</a>
+                        <a href="skills.html">Skills</a>
+                        <a href="network.html">Network</a>
+                        <a href="dashboard.html">Events</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#help">Help Center</a>
+                        <a href="#contact">Contact Us</a>
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 INES Student Career Hub. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Panel -->
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-header">
+            <h3>Notifications</h3>
+            <button class="btn-close" id="closeNotifications">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="notification-content">
+            <!-- Notifications will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Sign In Modal -->
+    <div id="signInModal" class="auth-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <button class="modal-close" id="closeSignIn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="signInForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="signInEmail">Email Address</label>
+                        <input type="email" id="signInEmail" required placeholder="Enter your email">
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="signInPassword">Password</label>
+                        <input type="password" id="signInPassword" required placeholder="Enter your password">
+                        <i class="fas fa-lock input-icon"></i>
+                        <button type="button" class="password-toggle" id="toggleSignInPassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </button>
+                </form>
+                <div class="auth-divider">
+                    <span>or continue with</span>
+                </div>
+                <div class="social-auth">
+                    <button class="btn btn-social btn-google">
+                        <i class="fab fa-google"></i>
+                        Google
+                    </button>
+                    <button class="btn btn-social btn-microsoft">
+                        <i class="fab fa-microsoft"></i>
+                        Microsoft
+                    </button>
+                </div>
+                <div class="auth-switch">
+                    <p>Don't have an account? <a href="#" id="switchToSignUp">Sign up here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signUpModal" class="auth-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Join INES Career Hub</h2>
+                <button class="modal-close" id="closeSignUp">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="signUpForm" class="auth-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" required placeholder="First name">
+                            <i class="fas fa-user input-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" required placeholder="Last name">
+                            <i class="fas fa-user input-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpEmail">Email Address</label>
+                        <input type="email" id="signUpEmail" required placeholder="Enter your INES email">
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <select id="department" required>
+                            <option value="">Select your department</option>
+                            <option value="engineering">Engineering & Technology</option>
+                            <option value="health">Health Sciences</option>
+                            <option value="business">Business & Economics</option>
+                            <option value="sciences">Applied Sciences</option>
+                            <option value="languages">Languages & Communication</option>
+                            <option value="administration">Administration</option>
+                        </select>
+                        <i class="fas fa-graduation-cap input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="program">Program/Major</label>
+                        <input type="text" id="program" required placeholder="e.g., Computer Science, Nursing">
+                        <i class="fas fa-book input-icon"></i>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signUpPassword">Password</label>
+                            <input type="password" id="signUpPassword" required placeholder="Create password">
+                            <i class="fas fa-lock input-icon"></i>
+                            <button type="button" class="password-toggle" id="toggleSignUpPassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" required placeholder="Confirm password">
+                            <i class="fas fa-lock input-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="agreeTerms" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </button>
+                </form>
+                <div class="auth-divider">
+                    <span>or continue with</span>
+                </div>
+                <div class="social-auth">
+                    <button class="btn btn-social btn-google">
+                        <i class="fab fa-google"></i>
+                        Google
+                    </button>
+                    <button class="btn btn-social btn-microsoft">
+                        <i class="fab fa-microsoft"></i>
+                        Microsoft
+                    </button>
+                </div>
+                <div class="auth-switch">
+                    <p>Already have an account? <a href="#" id="switchToSignIn">Sign in here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-backdrop" id="mobileBackdrop"></div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/hero.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

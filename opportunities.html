@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities - INES Career Hub</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/opportunities.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="landing.html" class="nav-brand">
+                <img src="image.png" alt="INES Logo" class="nav-logo">
+                <span class="nav-title">Career Hub</span>
+            </a>
+            
+            <div class="nav-search">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Search opportunities..." class="search-input">
+                </div>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="opportunities.html" class="nav-link active">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Opportunities</span>
+                </a>
+                <a href="network.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Network</span>
+                </a>
+                <a href="skills.html" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Skills</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-outline" id="signInBtn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Sign In
+                </button>
+                <button class="btn btn-primary" id="signUpBtn">
+                    <i class="fas fa-user-plus"></i>
+                    Sign Up
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Opportunities Page -->
+    <main class="opportunities-page">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">Career Opportunities</h1>
+                    <p class="page-subtitle">Discover your next career move with opportunities tailored to your skills</p>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="savedJobsBtn">
+                        <i class="fas fa-bookmark"></i>
+                        Saved Jobs (23)
+                    </button>
+                    <button class="btn btn-primary" id="jobAlertsBtn">
+                        <i class="fas fa-bell"></i>
+                        Job Alerts
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filters and Search -->
+            <div class="search-filters">
+                <div class="search-bar-container">
+                    <div class="advanced-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Job title, company, or keywords..." class="search-input-large">
+                        <button class="search-btn">Search</button>
+                    </div>
+                </div>
+                
+                <div class="filter-controls">
+                    <button class="filter-toggle" id="filterToggle">
+                        <i class="fas fa-filter"></i>
+                        Filters
+                        <span class="filter-count">3</span>
+                    </button>
+                    
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="sort-dropdown">
+                        <select class="sort-select">
+                            <option value="relevance">Most Relevant</option>
+                            <option value="date">Most Recent</option>
+                            <option value="salary">Highest Salary</option>
+                            <option value="match">Best Match</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Active Filters -->
+                <div class="active-filters">
+                    <span class="filter-chip">
+                        Technology
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <span class="filter-chip">
+                        Kigali
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <span class="filter-chip">
+                        Internship
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <button class="clear-filters">Clear All</button>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="opportunities-content">
+                <!-- Filter Sidebar -->
+                <aside class="filter-sidebar" id="filterSidebar">
+                    <div class="filter-section">
+                        <h3 class="filter-title">
+                            <i class="fas fa-briefcase"></i>
+                            Job Type
+                        </h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Internship (45)
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Full-time (23)
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Part-time (12)
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Contract (8)
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3 class="filter-title">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Location
+                        </h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Kigali (67)
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Remote (34)
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Huye (12)
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Musanze (5)
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3 class="filter-title">
+                            <i class="fas fa-industry"></i>
+                            Industry
+                        </h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Technology (45)
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Finance (23)
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Healthcare (18)
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Education (15)
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3 class="filter-title">
+                            <i class="fas fa-dollar-sign"></i>
+                            Salary Range
+                        </h3>
+                        <div class="salary-range">
+                            <input type="range" min="50000" max="500000" value="150000" class="salary-slider">
+                            <div class="salary-values">
+                                <span>50K RWF</span>
+                                <span>500K RWF</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Opportunities Grid -->
+                <div class="opportunities-grid" id="opportunitiesGrid">
+                    <div class="results-header">
+                        <p class="results-count">Showing <strong>1-20</strong> of <strong>89</strong> opportunities</p>
+                    </div>
+                    
+                    <div class="opportunity-cards">
+                        <!-- Opportunity Card 1 -->
+                        <div class="opportunity-card featured">
+                            <div class="card-header">
+                                <img src="assets/images/company-logo-1.png" alt="Tech Solutions" class="company-logo">
+                                <div class="card-badges">
+                                    <span class="featured-badge">Featured</span>
+                                    <span class="match-badge">95% Match</span>
+                                </div>
+                                <button class="bookmark-btn">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="card-content">
+                                <h3 class="opportunity-title">Senior Frontend Developer</h3>
+                                <p class="company-name">Tech Solutions Rwanda</p>
+                                
+                                <div class="opportunity-details">
+                                    <span class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Kigali, Rwanda
+                                    </span>
+                                    <span class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        Full-time
+                                    </span>
+                                    <span class="detail-item">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        300K - 500K RWF
+                                    </span>
+                                    <span class="detail-item">
+                                        <i class="fas fa-calendar"></i>
+                                        Posted 2 days ago
+                                    </span>
+                                </div>
+                                
+                                <p class="opportunity-description">
+                                    Join our dynamic team to build cutting-edge web applications using React, TypeScript, and modern development practices...
+                                </p>
+                                
+                                <div class="skill-tags">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">AWS</span>
+                                </div>
+                            </div>
+                            
+                            <div class="card-actions">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Apply Now
+                                </button>
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-eye"></i>
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- More opportunity cards would be dynamically generated -->
+                        
+                    </div>
+                    
+                    <!-- Load More -->
+                    <div class="load-more">
+                        <button class="btn btn-secondary btn-large" id="loadMoreBtn">
+                            <i class="fas fa-plus"></i>
+                            Load More Opportunities
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sign In Modal -->
+    <div id="signInModal" class="auth-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <button class="modal-close" id="closeSignIn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="signInForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="signInEmail">Email Address</label>
+                        <input type="email" id="signInEmail" required placeholder="Enter your email">
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="signInPassword">Password</label>
+                        <input type="password" id="signInPassword" required placeholder="Enter your password">
+                        <i class="fas fa-lock input-icon"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </button>
+                </form>
+                <div class="auth-switch">
+                    <p>Don't have an account? <a href="#" id="switchToSignUp">Sign up here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signUpModal" class="auth-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Join INES Career Hub</h2>
+                <button class="modal-close" id="closeSignUp">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="signUpForm" class="auth-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" required placeholder="First name">
+                            <i class="fas fa-user input-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" required placeholder="Last name">
+                            <i class="fas fa-user input-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpEmail">Email Address</label>
+                        <input type="email" id="signUpEmail" required placeholder="Enter your INES email">
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <select id="department" required>
+                            <option value="">Select your department</option>
+                            <option value="engineering">Engineering & Technology</option>
+                            <option value="health">Health Sciences</option>
+                            <option value="business">Business & Economics</option>
+                            <option value="sciences">Applied Sciences</option>
+                        </select>
+                        <i class="fas fa-graduation-cap input-icon"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </button>
+                </form>
+                <div class="auth-switch">
+                    <p>Already have an account? <a href="#" id="switchToSignIn">Sign in here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/opportunities.js"></script>
+    <script src="assets/js/filters.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

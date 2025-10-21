@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Builder - INES Career Hub</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/profile-builder.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="landing.html" class="nav-brand">
+                <img src="image.png" alt="INES Logo" class="nav-logo">
+                <span class="nav-title">Career Hub</span>
+            </a>
+            
+            <div class="nav-actions">
+                <button class="btn btn-secondary" id="saveProgressBtn">
+                    <i class="fas fa-save"></i>
+                    Save Progress
+                </button>
+                <button class="btn btn-text" id="exitBuilderBtn">
+                    <i class="fas fa-times"></i>
+                    Exit
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Builder -->
+    <main class="profile-builder">
+        <div class="container">
+            <!-- Progress Header -->
+            <div class="builder-header">
+                <div class="progress-section">
+                    <h1>Build Your Professional Profile</h1>
+                    <p>Complete your profile to attract employers and showcase your talents</p>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="overallProgress" style="width: 45%"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span id="progressPercentage">45%</span>
+                            <span>Complete</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profile-preview-toggle">
+                    <button class="btn btn-secondary" id="previewBtn">
+                        <i class="fas fa-eye"></i>
+                        Preview Profile
+                    </button>
+                </div>
+            </div>
+
+            <!-- Builder Content -->
+            <div class="builder-content">
+                <!-- Section Navigation -->
+                <div class="section-nav">
+                    <div class="nav-item active" data-section="basic">
+                        <div class="nav-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="nav-content">
+                            <h3>Basic Info</h3>
+                            <div class="completion-indicator">
+                                <div class="completion-bar" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="nav-status">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item" data-section="education">
+                        <div class="nav-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="nav-content">
+                            <h3>Education</h3>
+                            <div class="completion-indicator">
+                                <div class="completion-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="nav-status">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item" data-section="skills">
+                        <div class="nav-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="nav-content">
+                            <h3>Skills</h3>
+                            <div class="completion-indicator">
+                                <div class="completion-bar" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="nav-status">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item" data-section="experience">
+                        <div class="nav-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="nav-content">
+                            <h3>Experience</h3>
+                            <div class="completion-indicator">
+                                <div class="completion-bar" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <div class="nav-status">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item" data-section="projects">
+                        <div class="nav-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="nav-content">
+                            <h3>Projects</h3>
+                            <div class="completion-indicator">
+                                <div class="completion-bar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="nav-status">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Sections -->
+                <div class="form-sections">
+                    <!-- Basic Info Section -->
+                    <div class="form-section active" id="basic">
+                        <div class="section-header">
+                            <h2>
+                                <i class="fas fa-user"></i>
+                                Basic Information
+                            </h2>
+                            <p>Tell us about yourself and make a great first impression</p>
+                        </div>
+                        
+                        <div class="form-content">
+                            <div class="photo-upload-section">
+                                <div class="photo-upload">
+                                    <div class="photo-preview">
+                                        <img src="assets/images/default-avatar.jpg" alt="Profile Photo" id="photoPreview">
+                                        <div class="photo-overlay">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Change Photo</span>
+                                        </div>
+                                    </div>
+                                    <input type="file" id="photoInput" accept="image/*" hidden>
+                                    <div class="photo-guidelines">
+                                        <h4>Photo Guidelines:</h4>
+                                        <ul>
+                                            <li>Use a professional headshot</li>
+                                            <li>Face should be clearly visible</li>
+                                            <li>High quality image (min 400x400px)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-fields">
+                                <div class="field-row">
+                                    <div class="form-group">
+                                        <label class="form-label">First Name *</label>
+                                        <input type="text" class="form-input" value="John" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Last Name *</label>
+                                        <input type="text" class="form-input" value="Doe" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Professional Headline *</label>
+                                    <input type="text" class="form-input" placeholder="e.g., Computer Science Student | Aspiring Software Developer" required>
+                                    <small class="form-hint">This appears right below your name on your profile</small>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">About Me *</label>
+                                    <textarea class="form-textarea" rows="5" placeholder="Write a compelling summary about yourself, your goals, and what makes you unique..." required></textarea>
+                                    <div class="character-count">
+                                        <span id="aboutCharCount">0</span>/500 characters
+                                    </div>
+                                </div>
+                                
+                                <div class="field-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Location *</label>
+                                        <select class="form-select" required>
+                                            <option value="">Select Location</option>
+                                            <option value="kigali">Kigali</option>
+                                            <option value="musanze">Musanze</option>
+                                            <option value="huye">Huye</option>
+                                            <option value="rubavu">Rubavu</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-input" placeholder="+250 xxx xxx xxx">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">LinkedIn Profile</label>
+                                    <input type="url" class="form-input" placeholder="https://linkedin.com/in/yourprofile">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Section -->
+                    <div class="form-section" id="education">
+                        <div class="section-header">
+                            <h2>
+                                <i class="fas fa-graduation-cap"></i>
+                                Education
+                            </h2>
+                            <p>Add your educational background and achievements</p>
+                        </div>
+                        
+                        <div class="form-content">
+                            <div class="education-entries">
+                                <div class="education-entry">
+                                    <div class="entry-header">
+                                        <h3>Current Education</h3>
+                                        <button class="btn btn-text edit-btn">
+                                            <i class="fas fa-edit"></i>
+                                            Edit
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="field-row">
+                                        <div class="form-group">
+                                            <label class="form-label">Institution *</label>
+                                            <input type="text" class="form-input" value="Institut d'Enseignement Supérieur de Ruhengeri (INES)" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Degree *</label>
+                                            <select class="form-select" required>
+                                                <option value="">Select Degree</option>
+                                                <option value="bachelor" selected>Bachelor's Degree</option>
+                                                <option value="master">Master's Degree</option>
+                                                <option value="diploma">Diploma</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="field-row">
+                                        <div class="form-group">
+                                            <label class="form-label">Field of Study *</label>
+                                            <input type="text" class="form-input" value="Computer Science" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Current Year</label>
+                                            <select class="form-select">
+                                                <option value="">Select Year</option>
+                                                <option value="1">Year 1</option>
+                                                <option value="2">Year 2</option>
+                                                <option value="3" selected>Year 3</option>
+                                                <option value="4">Year 4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="field-row">
+                                        <div class="form-group">
+                                            <label class="form-label">Expected Graduation</label>
+                                            <input type="month" class="form-input" value="2025-06">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">GPA (Optional)</label>
+                                            <input type="number" class="form-input" step="0.01" min="0" max="4" placeholder="3.75">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-secondary add-entry-btn">
+                                <i class="fas fa-plus"></i>
+                                Add Previous Education
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="form-section" id="skills">
+                        <div class="section-header">
+                            <h2>
+                                <i class="fas fa-cogs"></i>
+                                Skills & Expertise
+                            </h2>
+                            <p>Showcase your technical and soft skills</p>
+                        </div>
+                        
+                        <div class="form-content">
+                            <div class="skills-categories">
+                                <div class="skill-category">
+                                    <h3>Technical Skills</h3>
+                                    <div class="skills-input-container">
+                                        <input type="text" class="skills-input" placeholder="Type a skill and press Enter">
+                                        <div class="skills-suggestions">
+                                            <span class="skill-suggestion">JavaScript</span>
+                                            <span class="skill-suggestion">Python</span>
+                                            <span class="skill-suggestion">React</span>
+                                            <span class="skill-suggestion">Node.js</span>
+                                            <span class="skill-suggestion">SQL</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="selected-skills">
+                                        <div class="skill-item">
+                                            <span class="skill-name">JavaScript</span>
+                                            <div class="skill-level">
+                                                <div class="level-dots">
+                                                    <span class="dot active"></span>
+                                                    <span class="dot active"></span>
+                                                    <span class="dot active"></span>
+                                                    <span class="dot active"></span>
+                                                    <span class="dot"></span>
+                                                </div>
+                                                <span class="level-text">Advanced</span>
+                                            </div>
+                                            <button class="remove-skill">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="skill-item">
+                                            <span class="skill-name">React</span>
+                                            <div class="skill-level">
+                                                <div class="level-dots">
+                                                    <span class="dot active"></span>
+                                                    <span class="dot active"></span>
+                                                    <span class="dot active"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                </div>
+                                                <span class="level-text">Intermediate</span>
+                                            </div>
+                                            <button class="remove-skill">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-category">
+                                    <h3>Soft Skills</h3>
+                                    <div class="skills-input-container">
+                                        <input type="text" class="skills-input" placeholder="Type a soft skill and press Enter">
+                                        <div class="skills-suggestions">
+                                            <span class="skill-suggestion">Leadership</span>
+                                            <span class="skill-suggestion">Communication</span>
+                                            <span class="skill-suggestion">Problem Solving</span>
+                                            <span class="skill-suggestion">Teamwork</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="selected-skills">
+                                        <div class="skill-item">
+                                            <span class="skill-name">Communication</span>
+                                            <div class="skill-level">
+                                                <div class="level-dots">
+                                                    <span class="dot active"></span>
+                                                    <span class="dot active"></span>
+                                                    <span class="dot active"></span>
+                                                    <span class="dot active"></span>
+                                                    <span class="dot active"></span>
+                                                </div>
+                                                <span class="level-text">Expert</span>
+                                            </div>
+                                            <button class="remove-skill">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Section -->
+                    <div class="form-section" id="experience">
+                        <div class="section-header">
+                            <h2>
+                                <i class="fas fa-briefcase"></i>
+                                Work Experience
+                            </h2>
+                            <p>Add your internships, jobs, and volunteer work</p>
+                        </div>
+                        
+                        <div class="form-content">
+                            <div class="experience-entries">
+                                <div class="empty-state">
+                                    <i class="fas fa-briefcase"></i>
+                                    <h3>No experience added yet</h3>
+                                    <p>Add your internships, part-time jobs, or volunteer work to showcase your experience</p>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary add-entry-btn">
+                                <i class="fas fa-plus"></i>
+                                Add Experience
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Projects Section -->
+                    <div class="form-section" id="projects">
+                        <div class="section-header">
+                            <h2>
+                                <i class="fas fa-code"></i>
+                                Projects & Portfolio
+                            </h2>
+                            <p>Showcase your best work and personal projects</p>
+                        </div>
+                        
+                        <div class="form-content">
+                            <div class="project-entries">
+                                <div class="empty-state">
+                                    <i class="fas fa-code"></i>
+                                    <h3>No projects added yet</h3>
+                                    <p>Add your academic projects, personal work, or contributions to showcase your skills</p>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary add-entry-btn">
+                                <i class="fas fa-plus"></i>
+                                Add Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="builder-actions">
+                <button class="btn btn-secondary" id="saveDraftBtn">
+                    <i class="fas fa-save"></i>
+                    Save as Draft
+                </button>
+                <button class="btn btn-primary" id="publishProfileBtn">
+                    <i class="fas fa-rocket"></i>
+                    Publish Profile
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Profile Preview Modal -->
+    <div class="profile-preview-modal" id="profilePreviewModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Profile Preview</h3>
+                <button class="modal-close" id="closePreview">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="preview-content">
+                    <!-- Profile preview will be generated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/profile-builder.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

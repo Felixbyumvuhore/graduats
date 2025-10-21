@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Network - INES Career Hub</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/network.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="network-body">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="landing.html" class="nav-brand">
+                <img src="image.png" alt="INES Logo" class="nav-logo">
+                <span class="nav-title">Career Hub</span>
+            </a>
+            
+            <div class="nav-search">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Search people, companies, alumni..." class="search-input">
+                </div>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="opportunities.html" class="nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Opportunities</span>
+                </a>
+                <a href="network.html" class="nav-link active">
+                    <i class="fas fa-users"></i>
+                    <span>Network</span>
+                </a>
+                <a href="skills.html" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Skills</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="nav-notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                <div class="nav-profile">
+                    <img src="assets/images/default-avatar.jpg" alt="Profile" class="profile-avatar">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Network Page -->
+    <main class="network-page">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">Professional Network</h1>
+                    <p class="page-subtitle">Connect with alumni, industry professionals, and like-minded peers</p>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="myConnectionsBtn">
+                        <i class="fas fa-users"></i>
+                        My Connections (47)
+                    </button>
+                    <button class="btn btn-primary" id="findPeopleBtn">
+                        <i class="fas fa-user-plus"></i>
+                        Find People
+                    </button>
+                </div>
+            </div>
+
+            <!-- Network Stats -->
+            <div class="network-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">47</div>
+                        <div class="stat-label">Connections</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">23</div>
+                        <div class="stat-label">Alumni Contacts</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Mentors</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Company Contacts</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Network Tabs -->
+            <div class="network-tabs">
+                <button class="tab-btn active" data-tab="suggestions">
+                    <i class="fas fa-user-plus"></i>
+                    People You May Know
+                </button>
+                <button class="tab-btn" data-tab="alumni">
+                    <i class="fas fa-graduation-cap"></i>
+                    Alumni Directory
+                </button>
+                <button class="tab-btn" data-tab="mentors">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    Find Mentors
+                </button>
+                <button class="tab-btn" data-tab="events">
+                    <i class="fas fa-calendar-alt"></i>
+                    Networking Events
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- People Suggestions Tab -->
+                <div class="tab-panel active" id="suggestions">
+                    <div class="suggestions-grid">
+                        <div class="person-card">
+                            <div class="person-header">
+                                <img src="assets/images/person-1.jpg" alt="Marie Uwimana" class="person-avatar">
+                                <button class="connect-btn">
+                                    <i class="fas fa-user-plus"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="person-info">
+                                <h3>Marie Uwimana</h3>
+                                <p class="person-title">Software Engineer at Andela</p>
+                                <p class="person-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Kigali, Rwanda
+                                </p>
+                                
+                                <div class="mutual-connections">
+                                    <div class="mutual-avatars">
+                                        <img src="assets/images/mutual-1.jpg" alt="Mutual">
+                                        <img src="assets/images/mutual-2.jpg" alt="Mutual">
+                                        <span class="mutual-count">+3</span>
+                                    </div>
+                                    <span class="mutual-text">5 mutual connections</span>
+                                </div>
+                                
+                                <div class="person-skills">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Python</span>
+                                </div>
+                            </div>
+                            
+                            <div class="person-actions">
+                                <button class="btn btn-primary">Connect</button>
+                                <button class="btn btn-secondary">Message</button>
+                            </div>
+                        </div>
+
+                        <div class="person-card">
+                            <div class="person-header">
+                                <img src="assets/images/person-2.jpg" alt="Jean Baptiste" class="person-avatar">
+                                <button class="connect-btn">
+                                    <i class="fas fa-user-plus"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="person-info">
+                                <h3>Jean Baptiste Nzeyimana</h3>
+                                <p class="person-title">Product Manager at Zipline</p>
+                                <p class="person-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Kigali, Rwanda
+                                </p>
+                                
+                                <div class="mutual-connections">
+                                    <div class="mutual-avatars">
+                                        <img src="assets/images/mutual-3.jpg" alt="Mutual">
+                                        <img src="assets/images/mutual-4.jpg" alt="Mutual">
+                                    </div>
+                                    <span class="mutual-text">2 mutual connections</span>
+                                </div>
+                                
+                                <div class="person-skills">
+                                    <span class="skill-tag">Product Management</span>
+                                    <span class="skill-tag">Strategy</span>
+                                </div>
+                            </div>
+                            
+                            <div class="person-actions">
+                                <button class="btn btn-primary">Connect</button>
+                                <button class="btn btn-secondary">Message</button>
+                            </div>
+                        </div>
+
+                        <!-- More person cards would be added here -->
+                    </div>
+                </div>
+
+                <!-- Alumni Directory Tab -->
+                <div class="tab-panel" id="alumni">
+                    <div class="alumni-filters">
+                        <div class="filter-group">
+                            <label>Graduation Year:</label>
+                            <select class="filter-select">
+                                <option value="">All Years</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label>Field of Study:</label>
+                            <select class="filter-select">
+                                <option value="">All Fields</option>
+                                <option value="cs">Computer Science</option>
+                                <option value="business">Business</option>
+                                <option value="engineering">Engineering</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label>Industry:</label>
+                            <select class="filter-select">
+                                <option value="">All Industries</option>
+                                <option value="tech">Technology</option>
+                                <option value="finance">Finance</option>
+                                <option value="healthcare">Healthcare</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="alumni-grid">
+                        <div class="alumni-card">
+                            <div class="alumni-header">
+                                <img src="assets/images/alumni-1.jpg" alt="Alumni" class="alumni-avatar">
+                                <div class="alumni-badge">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Class of 2022
+                                </div>
+                            </div>
+                            
+                            <div class="alumni-info">
+                                <h3>Grace Mukamana</h3>
+                                <p class="alumni-title">Senior Data Scientist at Carnegie Mellon</p>
+                                <p class="alumni-field">Computer Science</p>
+                                
+                                <div class="alumni-achievements">
+                                    <span class="achievement-badge">
+                                        <i class="fas fa-trophy"></i>
+                                        Valedictorian
+                                    </span>
+                                </div>
+                                
+                                <div class="alumni-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Pittsburgh, USA
+                                </div>
+                            </div>
+                            
+                            <div class="alumni-actions">
+                                <button class="btn btn-primary">Connect</button>
+                                <button class="btn btn-secondary">View Profile</button>
+                            </div>
+                        </div>
+
+                        <!-- More alumni cards would be added here -->
+                    </div>
+                </div>
+
+                <!-- Mentors Tab -->
+                <div class="tab-panel" id="mentors">
+                    <div class="mentors-intro">
+                        <h3>Find Your Perfect Mentor</h3>
+                        <p>Connect with experienced professionals who can guide your career journey</p>
+                    </div>
+                    
+                    <div class="mentors-grid">
+                        <div class="mentor-card featured">
+                            <div class="mentor-header">
+                                <img src="assets/images/mentor-1.jpg" alt="Mentor" class="mentor-avatar">
+                                <div class="mentor-badges">
+                                    <span class="featured-badge">Featured</span>
+                                    <span class="verified-badge">
+                                        <i class="fas fa-check-circle"></i>
+                                        Verified
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="mentor-info">
+                                <h3>Dr. Patrick Nkubito</h3>
+                                <p class="mentor-title">CTO at Bank of Kigali</p>
+                                <p class="mentor-experience">15+ years experience</p>
+                                
+                                <div class="mentor-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">4.9 (23 reviews)</span>
+                                </div>
+                                
+                                <div class="mentor-expertise">
+                                    <span class="expertise-tag">Fintech</span>
+                                    <span class="expertise-tag">Leadership</span>
+                                    <span class="expertise-tag">Strategy</span>
+                                </div>
+                                
+                                <div class="mentor-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">45</span>
+                                        <span class="stat-label">Mentees</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">2hrs</span>
+                                        <span class="stat-label">Response Time</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mentor-actions">
+                                <button class="btn btn-primary">Request Mentorship</button>
+                                <button class="btn btn-secondary">View Profile</button>
+                            </div>
+                        </div>
+
+                        <!-- More mentor cards would be added here -->
+                    </div>
+                </div>
+
+                <!-- Events Tab -->
+                <div class="tab-panel" id="events">
+                    <div class="events-header">
+                        <h3>Upcoming Networking Events</h3>
+                        <div class="event-filters">
+                            <button class="filter-btn active">All Events</button>
+                            <button class="filter-btn">This Week</button>
+                            <button class="filter-btn">Virtual</button>
+                            <button class="filter-btn">In-Person</button>
+                        </div>
+                    </div>
+                    
+                    <div class="events-list">
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="date-day">25</div>
+                                <div class="date-month">Oct</div>
+                            </div>
+                            
+                            <div class="event-info">
+                                <h3>Tech Career Fair 2024</h3>
+                                <p class="event-description">Connect with leading tech companies and explore career opportunities</p>
+                                
+                                <div class="event-details">
+                                    <span class="event-detail">
+                                        <i class="fas fa-clock"></i>
+                                        2:00 PM - 6:00 PM
+                                    </span>
+                                    <span class="event-detail">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        INES Campus, Musanze
+                                    </span>
+                                    <span class="event-detail">
+                                        <i class="fas fa-users"></i>
+                                        234 attending
+                                    </span>
+                                </div>
+                                
+                                <div class="event-companies">
+                                    <span>Companies: </span>
+                                    <img src="assets/images/company-1.png" alt="Company" class="company-logo-small">
+                                    <img src="assets/images/company-2.png" alt="Company" class="company-logo-small">
+                                    <img src="assets/images/company-3.png" alt="Company" class="company-logo-small">
+                                    <span class="more-companies">+12 more</span>
+                                </div>
+                            </div>
+                            
+                            <div class="event-actions">
+                                <button class="btn btn-primary">RSVP</button>
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="event-card virtual">
+                            <div class="event-date">
+                                <div class="date-day">28</div>
+                                <div class="date-month">Oct</div>
+                            </div>
+                            
+                            <div class="event-info">
+                                <h3>Alumni Networking Session</h3>
+                                <p class="event-description">Virtual networking with INES alumni working in various industries</p>
+                                
+                                <div class="event-details">
+                                    <span class="event-detail">
+                                        <i class="fas fa-clock"></i>
+                                        7:00 PM - 9:00 PM
+                                    </span>
+                                    <span class="event-detail">
+                                        <i class="fas fa-video"></i>
+                                        Virtual Event
+                                    </span>
+                                    <span class="event-detail">
+                                        <i class="fas fa-users"></i>
+                                        89 attending
+                                    </span>
+                                </div>
+                                
+                                <div class="event-topics">
+                                    <span class="topic-tag">Career Advice</span>
+                                    <span class="topic-tag">Industry Insights</span>
+                                    <span class="topic-tag">Q&A Session</span>
+                                </div>
+                            </div>
+                            
+                            <div class="event-actions">
+                                <button class="btn btn-primary">Join Event</button>
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-calendar-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- More event cards would be added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/network.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

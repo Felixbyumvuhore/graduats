@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
+            color: white;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:hover {
+            color: #ffd700;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-toggle span {
+            width: 25px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        /* Mobile Backdrop */
+        .mobile-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 998;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-backdrop.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Content */
+        .content {
+            padding: 100px 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(15, 23, 42, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 0;
+                transition: left 0.4s ease;
+                z-index: 999;
+                overflow-y: auto;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-link {
+                padding: 1.2rem 1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                font-size: 1.1rem;
+                display: block;
+            }
+
+            .nav-toggle {
+                display: flex;
+                z-index: 1000;
+            }
+
+            .nav-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .nav-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .nav-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">INES Menu Test</div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Platform</a>
+                <a href="#" class="nav-link">Opportunities</a>
+                <a href="#" class="nav-link">Skills</a>
+                <a href="#" class="nav-link">Network</a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Backdrop -->
+    <div class="mobile-backdrop" id="mobileBackdrop"></div>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>Mobile Menu Test Page</h1>
+        <p>Resize your browser to mobile size (< 768px) and click the hamburger menu (3 lines) in the top right.</p>
+        <br>
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Open browser developer tools (F12)</li>
+            <li>Toggle device toolbar (Ctrl+Shift+M)</li>
+            <li>Select a mobile device or resize to < 768px</li>
+            <li>Click the hamburger icon (3 horizontal lines)</li>
+            <li>Menu should slide in from the left</li>
+        </ol>
+        <br>
+        <h2>What Should Happen:</h2>
+        <ul>
+            <li>✅ Hamburger icon appears on mobile</li>
+            <li>✅ Click hamburger → menu slides in from left</li>
+            <li>✅ Hamburger transforms to X icon</li>
+            <li>✅ Dark backdrop appears behind menu</li>
+            <li>✅ Click backdrop or link → menu closes</li>
+        </ul>
+    </div>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+            const mobileBackdrop = document.getElementById('mobileBackdrop');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            console.log('Script loaded');
+            console.log('navToggle:', navToggle);
+            console.log('navMenu:', navMenu);
+            
+            if (navToggle && navMenu) {
+                // Toggle menu
+                navToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    console.log('Toggle clicked!');
+                    
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                    
+                    if (mobileBackdrop) {
+                        mobileBackdrop.classList.toggle('active');
+                    }
+                    
+                    // Lock body scroll
+                    if (navMenu.classList.contains('active')) {
+                        document.body.style.overflow = 'hidden';
+                        console.log('Menu opened');
+                    } else {
+                        document.body.style.overflow = '';
+                        console.log('Menu closed');
+                    }
+                });
+                
+                // Close on backdrop click
+                if (mobileBackdrop) {
+                    mobileBackdrop.addEventListener('click', function() {
+                        console.log('Backdrop clicked');
+                        navMenu.classList.remove('active');
+                        navToggle.classList.remove('active');
+                        mobileBackdrop.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                }
+                
+                // Close on link click
+                navLinks.forEach(function(link) {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        console.log('Link clicked');
+                        navMenu.classList.remove('active');
+                        navToggle.classList.remove('active');
+                        if (mobileBackdrop) {
+                            mobileBackdrop.classList.remove('active');
+                        }
+                        document.body.style.overflow = '';
+                    });
+                });
+                
+                // Close on resize
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth > 768) {
+                        navMenu.classList.remove('active');
+                        navToggle.classList.remove('active');
+                        if (mobileBackdrop) {
+                            mobileBackdrop.classList.remove('active');
+                        }
+                        document.body.style.overflow = '';
+                    }
+                });
+            } else {
+                console.error('Elements not found!');
+            }
+        });
+    </script>
+</body>
+</html>

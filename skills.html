@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Hub - INES Career Hub</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/skills.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="landing.html" class="nav-brand">
+                <img src="image.png" alt="INES Logo" class="nav-logo">
+                <span class="nav-title">Career Hub</span>
+            </a>
+            
+            <div class="nav-search">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Search skills, courses, mentors..." class="search-input">
+                </div>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="opportunities.html" class="nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Opportunities</span>
+                </a>
+                <a href="network.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Network</span>
+                </a>
+                <a href="skills.html" class="nav-link active">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Skills</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-outline" id="signInBtn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Sign In
+                </button>
+                <button class="btn btn-primary" id="signUpBtn">
+                    <i class="fas fa-user-plus"></i>
+                    Sign Up
+                </button>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Skills Hub Page -->
+    <main class="skills-page">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">Skills Hub</h1>
+                    <p class="page-subtitle">Develop in-demand skills through peer-to-peer learning and expert mentorship</p>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="mySkillsBtn">
+                        <i class="fas fa-user-graduate"></i>
+                        My Skills
+                    </button>
+                    <button class="btn btn-primary" id="addSkillBtn">
+                        <i class="fas fa-plus"></i>
+                        Add Skill
+                    </button>
+                </div>
+            </div>
+
+            <!-- Skills Overview -->
+            <div class="skills-overview">
+                <div class="skill-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Skills Mastered</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Certificates Earned</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number">23</div>
+                            <div class="stat-label">Peer Sessions</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number">92</div>
+                            <div class="stat-label">Skill Score</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Categories -->
+            <div class="skills-categories">
+                <div class="category-filters">
+                    <!-- Filters will be populated by JavaScript -->
+                </div>
+                
+                <div class="skills-grid" id="skillsGrid">
+                    <!-- Skills will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Learning Paths -->
+            <div class="learning-paths">
+                <div class="section-header">
+                    <h2 class="section-title">Curated Learning Paths</h2>
+                    <p class="section-subtitle">Structured pathways to master in-demand skills and advance your career</p>
+                </div>
+                
+                <div class="paths-grid">
+                    <div class="path-card animate-in">
+                        <div class="path-header">
+                            <div class="path-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="path-title">Full-Stack Developer</h3>
+                            <span class="path-duration">12 weeks</span>
+                            <span class="skill-count">24 skills</span>
+                        </div>
+                        
+                        <div class="popular-skills">
+                            <span class="skill-tag trending">JavaScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag trending">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                        
+                        <div class="category-actions">
+                            <button class="btn btn-primary btn-small">Explore Skills</button>
+                            <span class="learners-count">
+                                <i class="fas fa-users"></i>
+                                1,234 learners
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card" data-category="soft">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>Communication & Leadership</h3>
+                            <span class="skill-count">18 skills</span>
+                        </div>
+                        
+                        <div class="popular-skills">
+                            <span class="skill-tag">Public Speaking</span>
+                            <span class="skill-tag trending">Leadership</span>
+                            <span class="skill-tag">Team Management</span>
+                            <span class="skill-tag">Negotiation</span>
+                            <span class="skill-tag">Presentation</span>
+                        </div>
+                        
+                        <div class="category-actions">
+                            <button class="btn btn-primary btn-small">Explore Skills</button>
+                            <span class="learners-count">
+                                <i class="fas fa-users"></i>
+                                892 learners
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card" data-category="business">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Business & Analytics</h3>
+                            <span class="skill-count">16 skills</span>
+                        </div>
+                        
+                        <div class="popular-skills">
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag trending">Excel</span>
+                            <span class="skill-tag">Project Management</span>
+                            <span class="skill-tag">Marketing</span>
+                            <span class="skill-tag">Finance</span>
+                        </div>
+                        
+                        <div class="category-actions">
+                            <button class="btn btn-primary btn-small">Explore Skills</button>
+                            <span class="learners-count">
+                                <i class="fas fa-users"></i>
+                                756 learners
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card" data-category="creative">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3>Design & Creative</h3>
+                            <span class="skill-count">12 skills</span>
+                        </div>
+                        
+                        <div class="popular-skills">
+                            <span class="skill-tag">UI/UX Design</span>
+                            <span class="skill-tag">Photoshop</span>
+                            <span class="skill-tag trending">Figma</span>
+                            <span class="skill-tag">Video Editing</span>
+                            <span class="skill-tag">Branding</span>
+                        </div>
+                        
+                        <div class="category-actions">
+                            <button class="btn btn-primary btn-small">Explore Skills</button>
+                            <span class="learners-count">
+                                <i class="fas fa-users"></i>
+                                543 learners
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skill Exchange -->
+            <section class="skill-exchange">
+                <div class="section-header">
+                    <h2>
+                        <i class="fas fa-exchange-alt"></i>
+                        Skill Exchange
+                    </h2>
+                    <p>Learn from peers and share your expertise</p>
+                </div>
+                
+                <div class="exchange-grid">
+                    <div class="exchange-card">
+                        <div class="exchange-header">
+                            <img src="assets/images/student-1.jpg" alt="Sarah" class="student-avatar">
+                            <div class="student-info">
+                                <h4>Sarah Mukamana</h4>
+                                <p>Computer Science, Year 3</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="exchange-content">
+                            <div class="offering">
+                                <h5>Teaching:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">React.js</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                </div>
+                            </div>
+                            
+                            <div class="seeking">
+                                <h5>Learning:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Data Science</span>
+                                </div>
+                            </div>
+                            
+                            <div class="exchange-format">
+                                <span class="format-badge">
+                                    <i class="fas fa-coffee"></i>
+                                    Coffee Chat
+                                </span>
+                                <span class="format-badge">
+                                    <i class="fas fa-video"></i>
+                                    Online Session
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="exchange-actions">
+                            <button class="btn btn-primary">Connect</button>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-calendar"></i>
+                                Schedule
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- More exchange cards would be added here -->
+                </div>
+                
+                <div class="exchange-cta">
+                    <button class="btn btn-secondary btn-large">
+                        <i class="fas fa-plus"></i>
+                        Create Exchange Offer
+                    </button>
+                </div>
+            </section>
+
+            <!-- Learning Paths -->
+            <section class="learning-paths">
+                <div class="section-header">
+                    <h2>
+                        <i class="fas fa-route"></i>
+                        Recommended Learning Paths
+                    </h2>
+                    <p>Structured pathways to master in-demand skills</p>
+                </div>
+                
+                <div class="paths-grid">
+                    <div class="learning-path-card">
+                        <div class="path-header">
+                            <div class="path-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="path-info">
+                                <h3>Full-Stack Web Developer</h3>
+                                <p>Master modern web development from frontend to backend</p>
+                            </div>
+                        </div>
+                        
+                        <div class="path-progress">
+                            <div class="progress-info">
+                                <span>Progress: 3/8 skills</span>
+                                <span>38% Complete</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 38%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="path-skills">
+                            <div class="skill-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>HTML/CSS</span>
+                            </div>
+                            <div class="skill-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="skill-item current">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-circle"></i>
+                                <span>Express.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-circle"></i>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                        
+                        <div class="path-actions">
+                            <button class="btn btn-primary">Continue Learning</button>
+                            <span class="path-duration">
+                                <i class="fas fa-clock"></i>
+                                12 weeks
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- More learning path cards would be added here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Sign In Modal -->
+    <div id="signInModal" class="auth-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <button class="modal-close" id="closeSignIn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="signInForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="signInEmail">Email Address</label>
+                        <input type="email" id="signInEmail" required placeholder="Enter your email">
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="signInPassword">Password</label>
+                        <input type="password" id="signInPassword" required placeholder="Enter your password">
+                        <i class="fas fa-lock input-icon"></i>
+                        <button type="button" class="password-toggle" id="toggleSignInPassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </button>
+                </form>
+                <div class="auth-switch">
+                    <p>Don't have an account? <a href="#" id="switchToSignUp">Sign up here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signUpModal" class="auth-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Join INES Career Hub</h2>
+                <button class="modal-close" id="closeSignUp">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="signUpForm" class="auth-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" required placeholder="First name">
+                            <i class="fas fa-user input-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" required placeholder="Last name">
+                            <i class="fas fa-user input-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpEmail">Email Address</label>
+                        <input type="email" id="signUpEmail" required placeholder="Enter your INES email">
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <select id="department" required>
+                            <option value="">Select your department</option>
+                            <option value="engineering">Engineering & Technology</option>
+                            <option value="health">Health Sciences</option>
+                            <option value="business">Business & Economics</option>
+                            <option value="sciences">Applied Sciences</option>
+                            <option value="languages">Languages & Communication</option>
+                            <option value="administration">Administration</option>
+                        </select>
+                        <i class="fas fa-graduation-cap input-icon"></i>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signUpPassword">Password</label>
+                            <input type="password" id="signUpPassword" required placeholder="Create password">
+                            <i class="fas fa-lock input-icon"></i>
+                            <button type="button" class="password-toggle" id="toggleSignUpPassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" required placeholder="Confirm password">
+                            <i class="fas fa-lock input-icon"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </button>
+                </form>
+                <div class="auth-switch">
+                    <p>Already have an account? <a href="#" id="switchToSignIn">Sign in here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/skills.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

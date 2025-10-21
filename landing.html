@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INES Skills Marketplace - Badge-Powered Career Platform</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Rwanda's Skills Badge Marketplace - Matching Students to Internships, Gigs & Freelance Projects Through Live Skills-to-Job Matching">
+    <meta name="keywords" content="INES, skills badges, internships, gigs, freelance, youth employability, Rwanda, marketplace, job matching">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/landing-new.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="image.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="image.png" alt="INES Logo">
+            </div>
+            <div class="loading-text">
+                <h2>INES Career Hub</h2>
+                <p>Preparing your future...</p>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="landing-nav" id="landingNav">
+        <div class="nav-container">
+            <a href="landing.html" class="nav-brand">
+                <img src="image.png" alt="INES Logo" class="nav-logo">
+                <span class="nav-title">INES Career Hub</span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="landing.html" class="nav-link active">Home</a>
+                <a href="index.html" class="nav-link">Platform</a>
+                <a href="opportunities.html" class="nav-link">Opportunities</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="network.html" class="nav-link">Network</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-outline">Sign In</a>
+                <a href="index.html" class="btn btn-primary">Get Started</a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🏆 Skills Badge Marketplace - Live Matching System</div>
+            <h1 class="hero-title">
+                From <span class="highlight">Skills Badges</span> to Real 
+                Opportunities - Your Career Starts Here
+            </h1>
+            <p class="hero-subtitle">
+                Break free from the graduate unemployment cycle. Our AI-powered platform matches your verified skills badges 
+                to internships, gigs, and freelance projects - connecting talent with opportunity in real-time.
+            </p>
+            
+            <div class="hero-cta">
+                <a href="#badges" class="btn btn-primary">
+                    <i class="fas fa-award"></i>
+                    Earn Skills Badges
+                </a>
+                <a href="#marketplace" class="btn btn-secondary">
+                    <i class="fas fa-briefcase"></i>
+                    Browse Opportunities
+                </a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-number" data-target="1400">1,400</span>
+                    <span class="stat-label">Badge Holders</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="450">450+</span>
+                    <span class="stat-label">Active Gigs & Projects</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="87">87%</span>
+                    <span class="stat-label">Match Success Rate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Badges Showcase Section -->
+    <section id="badges" class="skills-showcase">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Skills Badge System</div>
+                <h2 class="section-title">Earn Badges, Unlock Opportunities</h2>
+                <p class="section-subtitle">
+                    Verified skills badges that employers trust - your passport to internships, gigs, and freelance projects
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="skill-title">🏅 Software Development Badge</h3>
+                    <p class="skill-description">Verified full-stack development skills - unlocks 120+ tech gigs</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">⭐ React Certified</span>
+                        <span class="skill-tag">⭐ Node.js Pro</span>
+                        <span class="skill-tag">⭐ Python Expert</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3 class="skill-title">🏅 Healthcare Professional Badge</h3>
+                    <p class="skill-description">Certified healthcare skills - access 85+ clinical internships</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">⭐ Nursing Certified</span>
+                        <span class="skill-tag">⭐ Lab Specialist</span>
+                        <span class="skill-tag">⭐ Pharmacy Tech</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="skill-title">🏅 Business Analytics Badge</h3>
+                    <p class="skill-description">Data analysis expertise - matches to 95+ analyst positions</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">⭐ Excel Master</span>
+                        <span class="skill-tag">⭐ SQL Pro</span>
+                        <span class="skill-tag">⭐ Tableau Certified</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3 class="skill-title">🏅 Engineering Design Badge</h3>
+                    <p class="skill-description">CAD & design certification - opens 75+ engineering projects</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">⭐ AutoCAD Pro</span>
+                        <span class="skill-tag">⭐ Civil 3D Expert</span>
+                        <span class="skill-tag">⭐ Revit Certified</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3 class="skill-title">🏅 Research & Innovation Badge</h3>
+                    <p class="skill-description">Research credentials - qualifies for 60+ research gigs</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">⭐ Lab Certified</span>
+                        <span class="skill-tag">⭐ Data Analyst</span>
+                        <span class="skill-tag">⭐ Published</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="skill-title">🏅 Creative Design Badge</h3>
+                    <p class="skill-description">Design portfolio verified - connects to 110+ design projects</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">⭐ UI/UX Master</span>
+                        <span class="skill-tag">⭐ Adobe Pro</span>
+                        <span class="skill-tag">⭐ Figma Expert</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="departments">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Marketplace Categories</div>
+                <h2 class="section-title">Opportunities Across All Fields</h2>
+                <p class="section-subtitle">
+                    Internships, gigs, and freelance projects matched to your department's skills badges
+                </p>
+            </div>
+            
+            <div class="departments-grid">
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="department-title">Engineering & Technology</h3>
+                    <p class="department-description">
+                        450+ badge holders matched to tech internships, software gigs, and engineering projects
+                    </p>
+                    <div class="department-stats">
+                        <div class="dept-stat">
+                            <span class="dept-stat-number">120+</span>
+                            <span class="dept-stat-label">Active Gigs</span>
+                        </div>
+                        <div class="dept-stat">
+                            <span class="dept-stat-number">85%</span>
+                            <span class="dept-stat-label">Match Rate</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="department-title">Health Sciences</h3>
+                    <p class="department-description">
+                        320+ certified professionals accessing clinical internships and healthcare projects
+                    </p>
+                    <div class="department-stats">
+                        <div class="dept-stat">
+                            <span class="dept-stat-number">85+</span>
+                            <span class="dept-stat-label">Internships</span>
+                        </div>
+                        <div class="dept-stat">
+                            <span class="dept-stat-number">92%</span>
+                            <span class="dept-stat-label">Placement Rate</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="department-title">Business & Economics</h3>
+                    <p class="department-description">
+                        280+ analysts matched to consulting gigs, freelance projects, and business internships
+                    </p>
+                    <div class="department-stats">
+                        <div class="dept-stat">
+                            <span class="dept-stat-number">95+</span>
+                            <span class="dept-stat-label">Projects</span>
+                        </div>
+                        <div class="dept-stat">
+                            <span class="dept-stat-number">88%</span>
+                            <span class="dept-stat-label">Success Rate</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="department-title">Applied Sciences</h3>
+                    <p class="department-description">
+                        180+ researchers connected to lab gigs, research projects, and field internships
+                    </p>
+                    <div class="department-stats">
+                        <div class="dept-stat">
+                            <span class="dept-stat-number">60+</span>
+                            <span class="dept-stat-label">Research Gigs</span>
+                        </div>
+                        <div class="dept-stat">
+                            <span class="dept-stat-number">90%</span>
+                            <span class="dept-stat-label">Match Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Matching Section -->
+    <section id="marketplace" class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Live Skills-to-Job Matching in Action</h2>
+            <p class="cta-subtitle">
+                Our AI-powered system instantly connects your verified skills badges to relevant opportunities. 
+                No more endless job hunting - let opportunities find you based on your proven capabilities.
+            </p>
+            <div class="cta-buttons">
+                <a href="index.html" class="btn btn-white">
+                    <i class="fas fa-award"></i>
+                    Build Badge Profile
+                </a>
+                <a href="opportunities.html" class="btn btn-secondary">
+                    <i class="fas fa-search"></i>
+                    Browse Marketplace
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>INES Career Hub</h3>
+                <p>Connecting talented INES students with opportunities across Rwanda and beyond.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="opportunities.html">Opportunities</a>
+                <a href="skills.html">Skills</a>
+                <a href="network.html">Network</a>
+            </div>
+            <div class="footer-section">
+                <h3>Departments</h3>
+                <a href="#">Engineering</a>
+                <a href="#">Health Sciences</a>
+                <a href="#">Business</a>
+                <a href="#">Applied Sciences</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: careers@ines.ac.rw</p>
+                <p>Phone: +250 XXX XXX XXX</p>
+                <p>Musanze, Rwanda</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 INES Career Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/landing.js"></script>
+</body>
+</html>
+                    <div class="dashboard-preview">
+                        <div class="preview-header">
+                            <div class="preview-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="preview-title">INES Career Hub</div>
+                        </div>
+                        <div class="preview-content">
+                            <div class="preview-sidebar">
+                                <div class="sidebar-item active">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>Dashboard</span>
+                                </div>
+                                <div class="sidebar-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Opportunities</span>
+                                </div>
+                                <div class="sidebar-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Skills</span>
+                                </div>
+                                <div class="sidebar-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Network</span>
+                                </div>
+                            </div>
+                            <div class="preview-main">
+                                <div class="preview-cards">
+                                    <div class="preview-card">
+                                        <div class="card-icon">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                        <div class="card-content">
+                                            <h4>Civil Engineer</h4>
+                                            <p>Rwanda Construction Ltd</p>
+                                        </div>
+                                    </div>
+                                    <div class="preview-card">
+                                        <div class="card-icon">
+                                            <i class="fas fa-user-nurse"></i>
+                                        </div>
+                                        <div class="card-content">
+                                            <h4>Registered Nurse</h4>
+                                            <p>King Faisal Hospital</p>
+                                        </div>
+                                    </div>
+                                    <div class="preview-card">
+                                        <div class="card-icon">
+                                            <i class="fas fa-chart-bar"></i>
+                                        </div>
+                                        <div class="card-content">
+                                            <h4>Economic Analyst</h4>
+                                            <p>National Bank of Rwanda</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-elements">
+                        <div class="floating-card card-1">
+                            <i class="fas fa-trophy"></i>
+                            <span>Top Performer</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-bell"></i>
+                            <span>New Opportunity</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fas fa-star"></i>
+                            <span>Skill Mastered</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Solving Youth Unemployment</div>
+                <h2 class="section-title">The Graduate Challenge - Our Solution</h2>
+                <p class="section-subtitle">
+                    Graduates struggle to find jobs not because they lack skills, but because they can't prove them. 
+                    We're changing that with verified skills badges and live opportunity matching.
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>The Problem</h3>
+                            <p>Talented graduates face unemployment because traditional credentials don't showcase real capabilities. Employers can't verify skills, students can't prove them.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Our Solution</h3>
+                            <p>Verified skills badges that prove your capabilities through assessments and projects. Employers trust them, students earn them, opportunities follow automatically.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>The Impact</h3>
+                            <p>87% match success rate connecting badge holders to opportunities. From unemployed graduate to working professional through proven skills.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="visual-grid">
+                        <div class="grid-item item-1">
+                            <i class="fas fa-award"></i>
+                            <span>1,400+ Badge Holders</span>
+                        </div>
+                        <div class="grid-item item-2">
+                            <i class="fas fa-briefcase"></i>
+                            <span>450+ Active Opportunities</span>
+                        </div>
+                        <div class="grid-item item-3">
+                            <i class="fas fa-handshake"></i>
+                            <span>200+ Partner Companies</span>
+                        </div>
+                        <div class="grid-item item-4">
+                            <i class="fas fa-chart-line"></i>
+                            <span>87% Match Success</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="departments-showcase">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Our Departments</div>
+                <h2 class="section-title">Every Field, Every Dream</h2>
+                <p class="section-subtitle">
+                    Discover opportunities tailored to your department and expertise
+                </p>
+            </div>
+            
+            <div class="departments-carousel">
+                <div class="carousel-container">
+                    <div class="department-slide active" data-department="engineering">
+                        <div class="slide-content">
+                            <div class="slide-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3>Engineering & Technology</h3>
+                            <p>Build the future with cutting-edge technology and innovative solutions</p>
+                            <div class="slide-stats">
+                                <span>450+ Students</span>
+                                <span>120+ Opportunities</span>
+                            </div>
+                            <ul class="slide-programs">
+                                <li>Water Engineering (WEN)</li>
+                                <li>Civil Engineering (CE)</li>
+                                <li>Computer Science</li>
+                                <li>Architecture</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="department-slide" data-department="health">
+                        <div class="slide-content">
+                            <div class="slide-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3>Health Sciences</h3>
+                            <p>Heal, care, and transform lives through medical excellence</p>
+                            <div class="slide-stats">
+                                <span>320+ Students</span>
+                                <span>85+ Opportunities</span>
+                            </div>
+                            <ul class="slide-programs">
+                                <li>Biomedical Laboratory Sciences</li>
+                                <li>General Nursing</li>
+                                <li>Pharmacy</li>
+                                <li>Anesthesia</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="department-slide" data-department="business">
+                        <div class="slide-content">
+                            <div class="slide-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Business & Economics</h3>
+                            <p>Drive economic growth and business innovation</p>
+                            <div class="slide-stats">
+                                <span>280+ Students</span>
+                                <span>95+ Opportunities</span>
+                            </div>
+                            <ul class="slide-programs">
+                                <li>Applied Economics</li>
+                                <li>Enterprise Management</li>
+                                <li>Land Management & Valuation</li>
+                                <li>Statistics Applied to Economy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="department-slide" data-department="sciences">
+                        <div class="slide-content">
+                            <div class="slide-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h3>Applied Sciences</h3>
+                            <p>Discover, research, and innovate for a better tomorrow</p>
+                            <div class="slide-stats">
+                                <span>180+ Students</span>
+                                <span>60+ Opportunities</span>
+                            </div>
+                            <ul class="slide-programs">
+                                <li>Biotechnology</li>
+                                <li>Land Survey</li>
+                                <li>Library & Information Sciences</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-navigation">
+                    <button class="carousel-btn active" data-slide="0">
+                        <i class="fas fa-cogs"></i>
+                        <span>Engineering</span>
+                    </button>
+                    <button class="carousel-btn" data-slide="1">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Health</span>
+                    </button>
+                    <button class="carousel-btn" data-slide="2">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Business</span>
+                    </button>
+                    <button class="carousel-btn" data-slide="3">
+                        <i class="fas fa-flask"></i>
+                        <span>Sciences</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-showcase">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">How It Works</div>
+                <h2 class="section-title">Badge to Opportunity in 3 Steps</h2>
+                <p class="section-subtitle">
+                    Simple, powerful, and designed to get you working faster
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card card-primary">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>1. Earn Skills Badges</h3>
+                    </div>
+                    <p>Complete assessments, projects, and challenges to earn verified badges that prove your capabilities to employers.</p>
+                    <div class="card-features">
+                        <span>✓ Skill assessments</span>
+                        <span>✓ Project portfolios</span>
+                        <span>✓ Verified credentials</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card card-secondary">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3>2. Get Matched Live</h3>
+                    </div>
+                    <p>Our AI instantly matches your badges to internships, gigs, and freelance projects that fit your skills perfectly.</p>
+                    <div class="card-features">
+                        <span>✓ Real-time matching</span>
+                        <span>✓ Smart recommendations</span>
+                        <span>✓ Instant notifications</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card card-accent">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>3. Start Working</h3>
+                    </div>
+                    <p>Apply to matched opportunities with your badge profile. Get hired for internships, gigs, or freelance projects.</p>
+                    <div class="card-features">
+                        <span>✓ One-click apply</span>
+                        <span>✓ Badge portfolio</span>
+                        <span>✓ Fast hiring</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card card-success">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Track Your Success</h3>
+                    </div>
+                    <p>Monitor your badge progress, opportunity matches, and career growth with detailed analytics and insights.</p>
+                    <div class="card-features">
+                        <span>✓ Badge dashboard</span>
+                        <span>✓ Match analytics</span>
+                        <span>✓ Career insights</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Ready to Transform Your Career?</h2>
+                    <p>Join thousands of INES students who have already discovered their dream opportunities through our platform.</p>
+                </div>
+                <div class="cta-actions">
+                    <button class="btn btn-primary btn-large" id="joinNowBtn">
+                        <i class="fas fa-rocket"></i>
+                        Join Now - It's Free
+                    </button>
+                    <button class="btn btn-outline btn-large" id="learnMoreBtn">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="landing-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="image.png" alt="INES Logo" class="footer-logo">
+                    <h3>INES Career Hub</h3>
+                    <p>Empowering students across all departments to achieve their career dreams.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Platform</h4>
+                        <a href="opportunities.html">Opportunities</a>
+                        <a href="skills.html">Skills</a>
+                        <a href="network.html">Network</a>
+                        <a href="dashboard.html">Dashboard</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Departments</h4>
+                        <a href="#">Engineering</a>
+                        <a href="#">Health Sciences</a>
+                        <a href="#">Business</a>
+                        <a href="#">Applied Sciences</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 INES Student Career Hub. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="video-container">
+                <iframe src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-backdrop" id="mobileBackdrop"></div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/landing.js"></script>
+</body>
+</html>
